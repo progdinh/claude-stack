@@ -32,8 +32,10 @@ T = {
                 "→ Implies &nbsp; what it changes: names a file, a stage, or a hypothesis<br/>"
                 "? Deeper &nbsp;&nbsp; what to study next, each with a price",
         "tldr_note": "Every number is <b>measured</b>, <b>sourced</b>, <b>derived</b> or <b>assumed</b>, and says which.",
-        "mix": "Easy to mix up: <b>/reflexes:last</b> reads the chat (what did you just do); <b>/lab:tldr</b> reads the project's files (where are we); "
-               "<b>/reflexes:big-job</b> shows the checklist of the job we left; <b>/reflexes:huh</b> explains one term. <b>/lab:init</b> sets a project up; "
+        "mix": "Easy to mix up: <b>/reflexes:go</b> gives the go-ahead to execute (bare, it resumes what was interrupted); <b>/big-job</b> is for when you "
+               "diverted into many subtasks and need to recall what the big job was; <b>/rectify</b> corrects Claude's own output; "
+               "<b>/update-context</b> records a change that touches the whole project (vault included); <b>/last</b> sums up the last prompt and its output; "
+               "<b>/lab:tldr</b> summarises the project's files and the processes that produced them. <b>/lab:init</b> sets a project up; "
                "Claude Code's own /init writes a CLAUDE.md.",
         "bare": "Plugin skills are namespaced (/lab:tldr, /reflexes:go). Copy a skill folder to ~/.claude/skills/ to get the bare name (/go).",
         "groups": {"reflex": "Reflexes", "start": "Start", "idea": "When you have an idea", "know": "Knowing what exists", "decide": "Deciding",
@@ -53,9 +55,11 @@ T = {
                 "→ Implique &nbsp; ce que cela change : nomme un fichier, une étape ou une hypothèse<br/>"
                 "? Creuser &nbsp;&nbsp; quoi étudier ensuite, chacun avec un prix",
         "tldr_note": "Chaque chiffre est <b>mesuré</b>, <b>sourcé</b>, <b>dérivé</b> ou <b>supposé</b>, et le dit.",
-        "mix": "Faciles à confondre : <b>/reflexes:last</b> lit le chat (qu'as-tu fait à l'instant) ; <b>/lab:tldr</b> lit les fichiers du projet (où en est-on) ; "
-               "<b>/reflexes:big-job</b> montre la liste de phases du chantier laissé en route ; <b>/reflexes:huh</b> explique un terme. <b>/lab:init</b> installe "
-               "la méthode dans un projet ; le /init de Claude Code écrit un CLAUDE.md.",
+        "mix": "Faciles à confondre : <b>/go</b> donne le feu vert pour exécuter (seul, il reprend ce qui a été interrompu) ; <b>/big-job</b> sert quand on "
+               "a dévié dans plein de sous-tâches et qu'on veut retrouver le grand chantier ; <b>/rectify</b> corrige une sortie de Claude ; "
+               "<b>/update-context</b> enregistre un changement qui touche tout le projet (coffre compris) ; <b>/last</b> résume le dernier prompt et sa réponse ; "
+               "<b>/lab:tldr</b> résume les fichiers du projet et les processus qui les ont produits. <b>/lab:init</b> installe la méthode dans un projet ; "
+               "le /init de Claude Code écrit un CLAUDE.md.",
         "bare": "Les skills de plugin ont un espace de noms (/lab:tldr, /reflexes:go). Copiez le dossier d'un skill dans ~/.claude/skills/ pour avoir le nom court (/go).",
         "groups": {"reflex": "Réflexes", "start": "Démarrer", "idea": "Quand on a une idée", "know": "Savoir ce qui existe", "decide": "Décider",
                    "trust": "Se fier à un résultat", "docs": "Garder la doc à jour"},

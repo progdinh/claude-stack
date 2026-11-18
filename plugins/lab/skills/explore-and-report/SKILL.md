@@ -155,8 +155,8 @@ or hurt it, and by how much? Typical misses:
   verified* and queued in "Still to file" — never cited as fact.
 - **No matching track → don't file in the nearest neighbour quietly.** If the
   topic belongs to no existing track's stated question, say so up front and
-  propose opening one (`/lab:new-track <name> "<question>"` — user-invoked;
-  the name and the question are theirs). Until they do, file in the nearest
+  propose opening one (a new track folder with its own CLAUDE.md stating
+  the one question it answers — the name and the question are theirs). Until they do, file in the nearest
   track with the index Status starting `**no matching track — filed here
   provisionally**`, and repeat that in the closing line. A track that merely
   *consumes* the finding is a neighbour, not a home.

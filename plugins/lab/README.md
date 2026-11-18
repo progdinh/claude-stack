@@ -64,7 +64,6 @@ line. The invariant part of the process is `reference/contract.md`.
 
 | `/lab:draft-ideas … --n 8` (v0.2.0) | 8 turns; checked the existing derivation, folded a duplicate into it, kept the kill on record, priced the top three; wrote `ideas.md` |
 
-| `/update-docs` run as a skill (2026-09-19, 31 skills) | drift check clean; SKILLS.md, README table and both PDFs regenerated; **all 7 PDF pages rendered and inspected** — no wraps, no missing glyphs, no split sections |
 | Personal reflex skills exercised live by the user | `/huh`, `/last`, `/go`, `/rectify` (x3), `/your-take`, `/progress`. Not yet run: `/where`, `/big-job`, `/update-context` beyond its flag path |
 
 | `/lab:stale` scanner on `sevel/experimentations` (v0.4.0) | first run raised 83 dead refs + 7 imports; after tightening (basename lookup, path-token filter, `ast` imports, sibling-track packages) **44 + 2**; hand-verified: 5 real findings, the rest examples / external repo names / dataset keys / historical citations. The judgement pass, not the scanner, found the most important one (a status row that lies) |
@@ -146,7 +145,6 @@ plan mode. None has shown it is needed; revisit after two projects of use.
 ## All skills
 
 <!-- skills:start -->
-*Generated — run `/update-docs` after adding or changing a skill.*
 
 **Reflexes**
 
@@ -167,7 +165,6 @@ plan mode. None has shown it is needed; revisit after two projects of use.
 | Command | Arguments | What it does |
 |---|---|---|
 | `/lab:init` *(manual)* | `[optional: one line on what the project is for]` | Set the process up in a project: writes the profile (headline metric, the units that bind, where records go); optionally an Obsidian vault (Home, analysis and deck templates). |
-| `/lab:new-track` *(manual)* | `<folder-name> "<the one question this track answers>` | Open a new research track: its one question, what it is not, empty records, root table row; moves in misfiled records. |
 | `/lab:run` | `[the question or idea]` | Work a question end to end: picks the right entry point and chains the stages. |
 | `/lab:tldr` | `[optional: a stage or topic to scope the recap to]` | Where is the project? State of play read from its files, blocking item first, every open item priced. |
 
@@ -211,5 +208,4 @@ plan mode. None has shown it is needed; revisit after two projects of use.
 
 | Command | Arguments | What it does |
 |---|---|---|
-| `/update-docs` | `[--check]   (report drift only, write nothing)` | Regenerate the skills index, the README table and both PDF references from the skills' own frontmatter; report what the guide is missing. |
 <!-- skills:end -->

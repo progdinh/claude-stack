@@ -36,7 +36,7 @@ Don't keep only locally a finding that changes the real project.
 
 **No matching track.** If the decision belongs to no existing track's stated
 question (it is about a different question that a track merely consumes),
-say so and propose `/lab:new-track`; until it exists, record it under
+say so and propose opening a new track folder (the name and the question are the user's); until it exists, record it under
 `Open / not yet decided` in the nearest track with the line *"no track of
 its own yet — move this entry there when it has one."*
 

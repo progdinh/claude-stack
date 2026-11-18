@@ -16,7 +16,7 @@ metadata:
 1. **This conversation.** If I created, edited, read, or mentioned it, I already
    know the path. Use that; don't search.
 2. **Known homes:** `~/.claude/skills/` (personal skills), `~/.claude/skills/lab/`
-   (plugin: `GUIDE.md`, `README.md`, `SKILLS.md`, the two PDFs, `reference/`),
+   (plugin: `GUIDE.md`, `README.md`, `reference/`),
    `~/.claude/CLAUDE.md`, `~/.claude/settings.json`, `~/.claude/eta-log.jsonl`,
    the project's `docs/`, its lab profile's Paths table, the memory directory.
 3. **Search**, only if 1–2 fail: one `find`/glob by name fragment, or one grep

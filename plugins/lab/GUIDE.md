@@ -27,9 +27,6 @@ asked; trivial work (bug fixes, one-liners, questions) is exempt.
 
 Later, when a question belongs to no existing track of a multi-track repo:
 
-```
-/lab:new-track <folder> "<the one question it answers>"   rarely — opens the track, moves in misfiled records
-```
 
 ## "I have a…" → which skill
 
@@ -62,7 +59,6 @@ And, outside the plugin, for quick side questions:
 /where the pdf [--open]        the exact path of a thing, what it is, how to open it
 /your-take idk                 undecided? Claude commits to a pick, says why and what would flip it; then /go 1
 /progress [id]                 how far along a running job is, time left, finish clock (detail view)
-/update-docs [--check]         regenerate SKILLS.md, the README table and both PDFs from the skills' frontmatter
 /last                          six short blocks: asked, did, result, changed, open, next
 /rectify <the correct fact>    Claude got something wrong: traces where the error spread, fixes it
 /update-context "<new fact>"   something changed outside the session: what it invalidates, then records it
@@ -118,7 +114,7 @@ build the *scaled-down reproduction first* → `stage-report`.
 
 ## You don't have to type the slash commands
 
-Except the four manual-only ones, `/lab:init` and `/lab:new-track`, Claude invokes these itself
+Except the manual-only `/lab:init`, Claude invokes these itself
 when the request matches — "derive this from first principles", "is this
 actually novel?", "why is this slow", "where are we". Typing the command just
 guarantees which procedure runs.

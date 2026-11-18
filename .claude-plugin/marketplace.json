@@ -18,7 +18,7 @@
     {
       "name": "reflexes",
       "source": "./plugins/reflexes",
-      "description": "/go /huh /last /progress /rectify /update-context /big-job /where /your-take /update-docs — short skills that read the conversation and answer briefly.",
+      "description": "/go /huh /last /progress /rectify /update-context /big-job /where /your-take — short skills that read the conversation and answer briefly.",
       "version": "0.1.0",
       "category": "productivity"
     }
