@@ -23,6 +23,7 @@ echo "--- existing records:"; find "${CLAUDE_PROJECT_DIR}" -maxdepth 4 \( -name 
 
 Template: [profile-template.md](../../reference/profile-template.md).
 Contract the profile plugs into: [contract.md](../../reference/contract.md).
+Obsidian templates (step 5b): `${CLAUDE_PLUGIN_ROOT}/reference/obsidian/` — `Home.md`, `analysis.md`, `deck.md`.
 
 ## Procedure
 
@@ -78,6 +79,28 @@ regulatory constraints). Don't ask about paths or conventions you can infer.
   `CLAUDE.md` pointing at the profile and stating the two rules that change
   behaviour most: *implementation starts in planning mode with a challenge*,
   and *every step ends with a filed record plus the four-part TL;DR*.
+
+### 5b. Obsidian vault (opt-in — ask once, alongside step 4)
+Offer it when the repo has a `.obsidian/` folder, or the user mentions
+Obsidian; otherwise skip silently. If accepted, **core plugins only, nothing
+to install**:
+- `Home.md` at the repo root from `reference/obsidian/Home.md` (entry point:
+  a **Status** table, an **Analyses log**, links to the records). If one
+  exists, add the missing sections; never overwrite.
+- `templates/analysis.md` and `templates/deck.md` from `reference/obsidian/`
+  (put them where the project keeps docs; `docs/templates/` by default).
+- Conventions, written into the profile as a `## Vault` section of ≤6 lines:
+  every analysis is a note in the reports folder made from the analysis
+  template, its frontmatter carries a `headline` **with a number**; every
+  analysis adds a row to Home's Analyses log and updates Status when it
+  moves; decks (slides split by `---`, shown with *Start presentation*) go in
+  `presentations/`; diagrams are Mermaid; figures go in `figures/`.
+- Tell the user to open the repo root as a vault. Don't touch `.obsidian/`
+  settings, and add `.obsidian/workspace*.json` to `.gitignore` if the user
+  versions the vault.
+
+`lab:stage-report` and `lab:record-decision` follow the `## Vault` section
+when the profile has one.
 
 ### 6. If a profile already existed
 Show a diff-style summary of what you would change and why; keep anything the

@@ -78,6 +78,9 @@ Each with a price.
   (including first attempts that were wrong — they are the valuable part).
 - If a hypothesis died, mark it killed where live hypotheses are kept, with
   the number that killed it.
+- If the profile has a `## Vault` section: write the report from the vault's
+  analysis template (frontmatter `headline` with a number), add a row to
+  Home's Analyses log, and update Home's Status table.
 
 ## Hard rules
 
