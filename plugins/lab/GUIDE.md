@@ -53,15 +53,6 @@ Later, when a question belongs to no existing track of a multi-track repo:
 | lost the thread on **what Claude just did** | `/last` | six-line digest of the last step, from the chat |
 | a whole question, end to end | `/lab:run <question>` | picks the entry point and chains the above |
 
-Manual-only, flag-driven:
-
-```
-/lab:bom-check --detail "RC car" --bulk 10 --region EU --budget 200
-/lab:relevant-partners --compute --credits --academia --for "AlphaGP testnet" --region France
-/lab:workshop-build "intro to ESP32 camera streaming" --minutes 60 --level beginner --hardware "ESP32-S3 + OV2640"
-/lab:exercise-ladder "fixed-point quantization" --rungs 3 --lang python --autocheck
-```
-
 And, outside the plugin, for quick side questions:
 
 ```
@@ -122,10 +113,8 @@ build the *scaled-down reproduction first* → `stage-report`.
 
 **Designing a competition or a reward**
 `derive-ansatz` on the format → `rule-stress-test` on every scoring clause →
-`record-decision` → `bom-check` and `relevant-partners` for the logistics.
+`record-decision`.
 
-**Teaching it**
-`workshop-build` → `exercise-ladder` for the three speeds inside it.
 
 ## You don't have to type the slash commands
 

@@ -12,10 +12,10 @@ Two plugins plus two drop-in templates, as used at the hackathon.
 
 | Plugin | What you get |
 |---|---|
-| `lab` | `/lab:run`, `derive-ansatz`, `challenge-design`, `explore-and-report`, `record-decision`, `stage-report`, `tldr`, `prototype`, `novelty-claim`, `init`, … — a research process where every step leaves a filed, falsifiable, priced record. Guide: `plugins/lab/GUIDE.md`. |
+| `lab` | `/lab:run`, `derive-ansatz`, `draft-ideas`, `challenge-design`, `explore-and-report`, `record-decision`, `stage-report`, `tldr`, `prototype`, `novelty-claim`, `init`, … — a research process where every step leaves a filed, falsifiable, priced record. Guide: `plugins/lab/GUIDE.md`. |
 | `reflexes` | `/reflexes:go`, `huh`, `last`, `progress`, `rectify`, `update-context`, `big-job`, `where`, `your-take`, `update-docs`. Short skills that read the conversation and answer briefly. |
 
-**PDFs:** [`lab-reference.pdf`](plugins/lab/lab-reference.pdf) (the process, one line per command) and [`skills-reference.pdf`](plugins/lab/skills-reference.pdf) (every skill with a one-line phrase, reflexes included). Start there.
+**Guide (one page-and-a-half per language):** [English](docs/stack-guide.en.pdf) · [Français](docs/stack-guide.fr.pdf). The nine skills I use most come first.
 
 Plugin skills are namespaced (`/lab:tldr`); copy a skill folder to `~/.claude/skills/` if you want the bare `/tldr`.
 
@@ -29,3 +29,11 @@ Plugin skills are namespaced (`/lab:tldr`); copy a skill folder to `~/.claude/sk
 - `/progress` and the status bar read `~/.claude/skills/progress/eta.py`; a plugin install lives elsewhere, so copy that folder once (above).
 - Some skills mention SEVEL paths (`../AGP`, `docs/lab/profile.md`) in examples; run `/lab:init` in your own repo to create your profile.
 - `update-docs` / `lab/reference/gen_docs.py` assume the lab plugin sits at `~/.claude/skills/lab/`.
+
+## Regenerating the guide
+
+```bash
+uv run --with reportlab python tools/gen_stack_guide.py
+```
+
+Reads each skill's frontmatter; add a French phrase to `tools/phrases_fr.json` when you add a skill (the script refuses to run without it). macOS fonts.

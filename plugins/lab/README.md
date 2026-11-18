@@ -38,10 +38,6 @@ machine** as `lab@skills-dir` — no install step. Skills are namespaced
 
 | Skill | Flags |
 |---|---|
-| `/lab:bom-check` | `--bulk [N]` `--detail "<what for>"` `--region` `--budget` `--file` |
-| `/lab:relevant-partners` | `--industrial` `--cash` `--compute` `--credits` `--academia` `--mentoring` `--region` `--for "<ask>"` `--n` |
-| `/lab:workshop-build "<topic>"` | `--minutes` `--level` `--format tool\|field` `--audience` `--hardware` `--out` |
-| `/lab:exercise-ladder "<concept>"` | `--rungs` `--lang` `--minutes-per-rung` `--autocheck` `--out` |
 
 Pipeline: **(draft) → derive → explore → challenge → record → (plan → build →
 repro-check → stage-report) → tldr.**
@@ -67,7 +63,6 @@ line. The invariant part of the process is `reference/contract.md`.
 | Name collision inside `sevel/experimentations` | Claude picks the project-local `derive-ansatz`, treats `lab:` as fallback |
 
 | `/lab:draft-ideas … --n 8` (v0.2.0) | 8 turns; checked the existing derivation, folded a duplicate into it, kept the kill on record, priced the top three; wrote `ideas.md` |
-| `/lab:bom-check --bulk 40 --detail "RC car" --region EU --budget 200` dry run | flags parsed correctly; noticed the detail doesn't match the project profile |
 
 | `/update-docs` run as a skill (2026-09-19, 31 skills) | drift check clean; SKILLS.md, README table and both PDFs regenerated; **all 7 PDF pages rendered and inspected** — no wraps, no missing glyphs, no split sections |
 | Personal reflex skills exercised live by the user | `/huh`, `/last`, `/go`, `/rectify` (x3), `/your-take`, `/progress`. Not yet run: `/where`, `/big-job`, `/update-context` beyond its flag path |
@@ -76,8 +71,7 @@ line. The invariant part of the process is `reference/contract.md`.
 
 v0.2.0 skills **not yet exercised on a real task**: `apply-academia`,
 `novelty-claim`, `ablation-plan`, `repro-check`, `integrity-audit`,
-`perf-investigation`, `rule-stress-test`, `relevant-partners`,
-`workshop-build`, `exercise-ladder`, and `bom-check` beyond flag parsing. All
+`perf-investigation`, `rule-stress-test`. All
 validate and share the tested injection line. Expect each to need one round of
 edits after its first real use — `derive-ansatz` was written against a real
 problem the same day and is the better for it.
@@ -212,14 +206,6 @@ plan mode. None has shown it is needed; revisit after two projects of use.
 | `/lab:stage-report` | `[the stage or experiment that just finished]` | Close an experiment: the numbers, what was falsified, what broke, what it unblocks. |
 | `/lab:stale` | `[--docs] [--reports] [--code] [path]   (none = all three)` | What has gone stale? Dead references, overtaken docs and reports, lying status rows, undeclared imports, each with evidence and a fix price. |
 
-**Organising and teaching**
-
-| Command | Arguments | What it does |
-|---|---|---|
-| `/lab:bom-check` *(manual)* | `[--bulk [N]] [--detail "<what it's for>"] [--region EU\|US\|…] [--budget <amount>] [--file <existing BOM path>]` | Bill of materials with real fetched prices, stock, second sources, totals against budget. |
-| `/lab:exercise-ladder` *(manual)* | `"<concept>" [--rungs 3] [--lang python] [--minutes-per-rung 10] [--autocheck] [--out <dir>]` | One concept at several difficulty rungs, each with a checkable answer, hints, and the misconception it exposes. |
-| `/lab:relevant-partners` *(manual)* | `[--industrial] [--cash] [--compute] [--credits] [--academia] [--mentoring] [--region <where>] [--for "<project or ask>"] [--n 10]` | Verified potential partners: what they could give, why they would care, the specific ask, the evidence to bring. |
-| `/lab:workshop-build` *(manual)* | `"<topic>" [--minutes 60] [--level beginner\|intermediate\|advanced] [--format tool\|field] [--audience "<who>"] [--hardware "<kit>"] [--out <dir>]` | A timed hands-on workshop: working artefact by two-thirds time, setup that cannot fail in the room, one planned failure to debug. |
 
 **Keeping the docs current**
 

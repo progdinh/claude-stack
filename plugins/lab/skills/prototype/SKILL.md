@@ -69,7 +69,7 @@ actually controlled.
 ### 5. What it needs
 - **Skills** — and which the team has vs must learn (learning time is cost).
 - **Parts / hardware** — rough lines with prices tagged *assumed* unless
-  fetched; point at `/lab:bom-check` for the real numbers.
+  fetched.
 - **Data** — exists? licensed? how much? who labels?
 - **Compute / services / credits** — and whether existing allocations cover it.
 - **People / partners / permissions** — access, sign-offs, anything
@@ -94,7 +94,7 @@ whether the *likely* case fits, and what to cut if not.
 If it works: the next stage and what it would need. Then the single next
 command: `/lab:derive-ansatz` (the core is genuinely unsolved),
 `/lab:apply-academia` (it rests on a paper), `/lab:explore-and-report`
-(someone has probably built this), `/lab:bom-check`, `/lab:rule-stress-test`,
+(someone has probably built this), `/lab:rule-stress-test`,
 or — with `--build` — planning mode.
 
 ## Output

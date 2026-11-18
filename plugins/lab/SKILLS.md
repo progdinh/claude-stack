@@ -61,15 +61,6 @@
 | `/lab:stage-report` | `[the stage or experiment that just finished]` | Close an experiment: the numbers, what was falsified, what broke, what it unblocks. |
 | `/lab:stale` | `[--docs] [--reports] [--code] [path]   (none = all three)` | What has gone stale? Dead references, overtaken docs and reports, lying status rows, undeclared imports, each with evidence and a fix price. |
 
-## Organising and teaching
-*manual only: these never run on their own and cost no context until typed*
-
-| Command | Arguments | What it does |
-|---|---|---|
-| `/lab:bom-check` *(manual)* | `[--bulk [N]] [--detail "<what it's for>"] [--region EU\|US\|…] [--budget <amount>] [--file <existing BOM path>]` | Bill of materials with real fetched prices, stock, second sources, totals against budget. |
-| `/lab:exercise-ladder` *(manual)* | `"<concept>" [--rungs 3] [--lang python] [--minutes-per-rung 10] [--autocheck] [--out <dir>]` | One concept at several difficulty rungs, each with a checkable answer, hints, and the misconception it exposes. |
-| `/lab:relevant-partners` *(manual)* | `[--industrial] [--cash] [--compute] [--credits] [--academia] [--mentoring] [--region <where>] [--for "<project or ask>"] [--n 10]` | Verified potential partners: what they could give, why they would care, the specific ask, the evidence to bring. |
-| `/lab:workshop-build` *(manual)* | `"<topic>" [--minutes 60] [--level beginner\|intermediate\|advanced] [--format tool\|field] [--audience "<who>"] [--hardware "<kit>"] [--out <dir>]` | A timed hands-on workshop: working artefact by two-thirds time, setup that cannot fail in the room, one planned failure to debug. |
 
 ## Keeping the docs current
 
