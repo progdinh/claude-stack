@@ -5,7 +5,7 @@ disable-model-invocation: true
 argument-hint: [optional: one line on what the project is for]
 metadata:
   group: start
-  phrase: "Set the process up in a project: writes the profile (headline metric, the units that bind, where records go)."
+  phrase: "Set the process up in a project: writes the profile (headline metric, the units that bind, where records go); optionally an Obsidian vault (Home, analysis and deck templates)."
 ---
 
 # Initialise the lab in this project

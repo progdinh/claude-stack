@@ -15,6 +15,8 @@ Two plugins plus two drop-in templates, as used at the hackathon.
 | `lab` | `/lab:run`, `derive-ansatz`, `challenge-design`, `explore-and-report`, `record-decision`, `stage-report`, `tldr`, `prototype`, `novelty-claim`, `init`, … — a research process where every step leaves a filed, falsifiable, priced record. Guide: `plugins/lab/GUIDE.md`. |
 | `reflexes` | `/reflexes:go`, `huh`, `last`, `progress`, `rectify`, `update-context`, `big-job`, `where`, `your-take`, `update-docs`. Short skills that read the conversation and answer briefly. |
 
+**PDFs:** [`lab-reference.pdf`](plugins/lab/lab-reference.pdf) (the process, one line per command) and [`skills-reference.pdf`](plugins/lab/skills-reference.pdf) (every skill with a one-line phrase, reflexes included). Start there.
+
 Plugin skills are namespaced (`/lab:tldr`); copy a skill folder to `~/.claude/skills/` if you want the bare `/tldr`.
 
 ## Templates (not installable as plugins)

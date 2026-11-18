@@ -172,7 +172,7 @@ plan mode. None has shown it is needed; revisit after two projects of use.
 
 | Command | Arguments | What it does |
 |---|---|---|
-| `/lab:init` *(manual)* | `[optional: one line on what the project is for]` | Set the process up in a project: writes the profile (headline metric, the units that bind, where records go). |
+| `/lab:init` *(manual)* | `[optional: one line on what the project is for]` | Set the process up in a project: writes the profile (headline metric, the units that bind, where records go); optionally an Obsidian vault (Home, analysis and deck templates). |
 | `/lab:new-track` *(manual)* | `<folder-name> "<the one question this track answers>` | Open a new research track: its one question, what it is not, empty records, root table row; moves in misfiled records. |
 | `/lab:run` | `[the question or idea]` | Work a question end to end: picks the right entry point and chains the stages. |
 | `/lab:tldr` | `[optional: a stage or topic to scope the recap to]` | Where is the project? State of play read from its files, blocking item first, every open item priced. |
