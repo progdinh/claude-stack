@@ -1,0 +1,6 @@
+{
+  "name": "reflexes",
+  "description": "One-word reflex skills: /go (proceed), /huh (explain that), /last (what just happened), /progress (ETA from a real signal), /rectify, /update-context, /big-job, /where, /your-take, /update-docs.",
+  "version": "0.1.0",
+  "author": { "name": "Joseph Giordano-Dinh (SEVEL LABS)" }
+}

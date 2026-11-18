@@ -1,0 +1,191 @@
+[
+ {
+  "title": "This repo only &mdash; sevel/experimentations",
+  "where": "&lt;repo&gt;/.claude/skills/ &nbsp;&middot;&nbsp; same procedures as their /lab: twins, with this repo's tracks, units and AGP upstream built in",
+  "rows": [
+   [
+    "/derive-ansatz",
+    "First-principles derivation, filed under &lt;track&gt;/derivations/."
+   ],
+   [
+    "/explore-and-report",
+    "Sourced report under &lt;track&gt;/explorations/, scoped to SRAM, bytes moved, euros, lap time."
+   ],
+   [
+    "/challenge-design",
+    "Challenge a choice against grams, euros, milliseconds, kilobytes, joules, lap seconds."
+   ],
+   [
+    "/record-decision",
+    "Entry in the right docs/decisions.md; checks whether it also belongs in ../AGP."
+   ],
+   [
+    "/tldr",
+    "Recap of a track's state: roadmap, open decisions, live hypotheses H1, H2, H3."
+   ]
+  ],
+  "note": "Inside this repo these take priority over the /lab: versions."
+ },
+ {
+  "title": "Code quality &mdash; bundled",
+  "where": "ships with Claude Code",
+  "rows": [
+   [
+    "/code-review [level] [PR | branch | path]",
+    "Review the current diff or a PR for correctness bugs. Levels low to max; ultra runs a multi-agent cloud review (billed). --fix applies findings, --comment posts them on the PR."
+   ],
+   [
+    "/simplify",
+    "Review changed code for reuse, simplification and efficiency, then apply the fixes. Quality only, not bug-hunting."
+   ],
+   [
+    "/security-review",
+    "Security review of the pending changes on the current branch (code vulnerabilities; for data leakage use /lab:integrity-audit)."
+   ],
+   [
+    "/run",
+    "Launch and drive the project's app to see a change actually working, not just the tests."
+   ],
+   [
+    "/init",
+    "Create a CLAUDE.md documenting the codebase (different from /lab:init, which writes the lab profile)."
+   ]
+  ]
+ },
+ {
+  "title": "Automation and setup &mdash; bundled",
+  "where": "ships with Claude Code",
+  "rows": [
+   [
+    "/loop [interval] <prompt | /command>",
+    "Repeat a prompt or command on an interval, or self-paced if no interval is given."
+   ],
+   [
+    "/schedule",
+    "Create, list, update or run scheduled cloud agents on a cron schedule, or a one-off run at a set time."
+   ],
+   [
+    "/update-config",
+    "Change settings.json: hooks (whenever X, do Y), permissions, environment variables."
+   ],
+   [
+    "/fewer-permission-prompts",
+    "Scan past sessions for safe read-only commands and add an allowlist so you are asked less often."
+   ],
+   [
+    "/keybindings-help",
+    "Customise keyboard shortcuts in ~/.claude/keybindings.json."
+   ],
+   [
+    "/claude-api",
+    "Reference for building with the Claude API and SDK: model ids, pricing, tool use, caching, agents."
+   ],
+   [
+    "/claude-in-chrome",
+    "Drive your Chrome browser: click, fill forms, screenshot, read console logs."
+   ]
+  ]
+ },
+ {
+  "title": "Design, charts and published pages &mdash; bundled",
+  "where": "mostly used by Claude on its own when the task calls for it",
+  "rows": [
+   [
+    "/frontend-design:frontend-design",
+    "Guidance for distinctive, intentional visual design when building or reshaping a UI."
+   ],
+   [
+    "/dataviz",
+    "Read before making any chart or dashboard: form heuristics, a validated colour system, light and dark."
+   ],
+   [
+    "/artifact-design",
+    "Design fundamentals for Artifacts (hosted web pages on claude.ai); loaded before writing one."
+   ],
+   [
+    "/artifact-diagramming",
+    "When a diagram earns its place, and how to draw one that stays legible in both themes."
+   ],
+   [
+    "/artifact-capabilities",
+    "What a published page can do at runtime: live data, shared state, saved input, files."
+   ]
+  ]
+ },
+ {
+  "title": "Documents &mdash; synced from your claude.ai account",
+  "where": "~/.claude/skills/synced/ &nbsp;&middot;&nbsp; typed as /anthropic-skills:&lt;name&gt;, or just ask in plain words",
+  "rows": [
+   [
+    "/anthropic-skills:docs",
+    "Living documents people share, comment on and edit together."
+   ],
+   [
+    "/anthropic-skills:docx",
+    "Create, read and edit Word documents, including tracked changes and templates."
+   ],
+   [
+    "/anthropic-skills:pptx",
+    "Create, read and edit PowerPoint decks."
+   ],
+   [
+    "/anthropic-skills:xlsx",
+    "Create, clean and edit spreadsheets, including CSV and TSV."
+   ],
+   [
+    "/anthropic-skills:pdf",
+    "Read, merge, split, fill, OCR and create PDFs."
+   ],
+   [
+    "/anthropic-skills:skill-creator",
+    "Create and improve skills, and measure them with evals: the tool for testing the lab skills properly."
+   ],
+   [
+    "/anthropic-skills:morning",
+    "Your morning brief as a styled page, or set it up as a recurring weekday task."
+   ],
+   [
+    "/anthropic-skills:import-memory",
+    "Import a memory export from another AI assistant into Claude's memory."
+   ]
+  ]
+ },
+ {
+  "title": "Session commands &mdash; not skills, but worth knowing",
+  "where": "built into the Claude Code terminal",
+  "rows": [
+   [
+    "/skills",
+    "The live list of every skill in this session; switch individual ones on or off."
+   ],
+   [
+    "/reload-plugins",
+    "Pick up a newly added plugin or plugin skill without restarting. Fixes Unknown command: /lab:..."
+   ],
+   [
+    "/plugin",
+    "Browse, install and manage plugins."
+   ],
+   [
+    "/permissions",
+    "What Claude may do without asking."
+   ],
+   [
+    "/model  /config  /fast",
+    "Choose the model, settings, toggle faster output."
+   ],
+   [
+    "/add-dir  /cd",
+    "Give the session another directory; move it to one."
+   ],
+   [
+    "/artifacts",
+    "List the pages you have published; open or copy a link."
+   ],
+   [
+    "/clear  /help",
+    "Start the conversation over; everything else."
+   ]
+  ]
+ }
+]

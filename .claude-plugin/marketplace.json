@@ -1,0 +1,26 @@
+{
+  "name": "sevel-stack",
+  "owner": {
+    "name": "Joseph Giordano-Dinh",
+    "email": "giordanodinh@gmail.com"
+  },
+  "metadata": {
+    "description": "Joseph's Claude Code stack from the hackathon: a first-principles research process and one-word reflex skills."
+  },
+  "plugins": [
+    {
+      "name": "lab",
+      "source": "./plugins/lab",
+      "description": "First-principles research process: derive, explore, challenge, record decisions, stage reports, TL;DR. Every step leaves a filed, falsifiable, priced artifact.",
+      "version": "0.5.0",
+      "category": "research"
+    },
+    {
+      "name": "reflexes",
+      "source": "./plugins/reflexes",
+      "description": "/go /huh /last /progress /rectify /update-context /big-job /where /your-take /update-docs — short skills that read the conversation and answer briefly.",
+      "version": "0.1.0",
+      "category": "productivity"
+    }
+  ]
+}
