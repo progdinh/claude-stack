@@ -37,7 +37,7 @@ T = {
                "<b>/update-context</b> records a change that touches the whole project (vault included); <b>/last</b> sums up the last prompt and its output; "
                "<b>/lab:tldr</b> summarises the project's files and the processes that produced them. <b>/lab:init</b> sets a project up; "
                "Claude Code's own /init writes a CLAUDE.md.",
-        "bare": "Plugin skills are namespaced (/lab:tldr, /reflexes:go). Copy a skill folder to ~/.claude/skills/ to get the bare name (/go).",
+        "bare": "Quick start: run tools/install-bare.sh once to copy the reflexes into ~/.claude/skills, so you type /go, /huh, /last with no prefix. Plugin skills are namespaced (/lab:tldr, /reflexes:go); lab keeps its prefix on purpose.",
         "groups": {"reflex": "Reflexes", "start": "Start", "idea": "When you have an idea", "know": "Knowing what exists", "decide": "Deciding",
                    "trust": "Trusting a result", "docs": "Keeping the docs current"},
         "footer": "generated", "args": "arguments",
@@ -60,7 +60,7 @@ T = {
                "<b>/update-context</b> enregistre un changement qui touche tout le projet (coffre compris) ; <b>/last</b> résume le dernier prompt et sa réponse ; "
                "<b>/lab:tldr</b> résume les fichiers du projet et les processus qui les ont produits. <b>/lab:init</b> installe la méthode dans un projet ; "
                "le /init de Claude Code écrit un CLAUDE.md.",
-        "bare": "Les skills de plugin ont un espace de noms (/lab:tldr, /reflexes:go). Copiez le dossier d'un skill dans ~/.claude/skills/ pour avoir le nom court (/go).",
+        "bare": "Démarrage rapide : lancez tools/install-bare.sh une fois pour copier les réflexes dans ~/.claude/skills ; vous tapez alors /go, /huh, /last sans préfixe. Les skills de plugin ont un espace de noms (/lab:tldr, /reflexes:go) ; lab garde le sien volontairement.",
         "groups": {"reflex": "Réflexes", "start": "Démarrer", "idea": "Quand on a une idée", "know": "Savoir ce qui existe", "decide": "Décider",
                    "trust": "Se fier à un résultat", "docs": "Garder la doc à jour"},
         "footer": "généré le", "args": "arguments",
@@ -164,7 +164,7 @@ def build(lang, rows, fr):
     rest = [r for r in rows.values() if r["name"] not in FAVOURITES]
     story = [P(t["title"], "title"), P(t["sub"], "sub"), Spacer(1, 7), P(t["intro"]), Spacer(1, 6),
              P(t["install"], "h"), Spacer(1, 2),
-             band("/plugin marketplace add progdinh/claude-stack<br/>/plugin install lab@sevel-stack<br/>/plugin install reflexes@sevel-stack"),
+             band("tools/install-bare.sh &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# reflexes: /go /huh /last …<br/>/plugin marketplace add progdinh/claude-stack<br/>/plugin install lab@sevel-stack &nbsp;&nbsp;# /lab:derive-ansatz …"),
              Spacer(1, 3), P(t["bare"], "small"),
              KeepTogether([P(t["fav"], "h"), Spacer(1, 2), table(pairs(fav)), Spacer(1, 2), P(t["fav_note"], "small")])]
     story.append(P(t["rest"], "h"))

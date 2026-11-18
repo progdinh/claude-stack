@@ -2,13 +2,25 @@
 
 Two plugins plus two drop-in templates, as used at the hackathon.
 
+## Quick start (do this first)
+
+The reflexes are meant to be typed as one word: `/go`, `/huh`, `/last`, `/progress`, `/your-take`. A plugin adds a prefix (`/reflexes:go`), so copy the skills once and drop it:
+
+```bash
+git clone https://github.com/progdinh/claude-stack && cd claude-stack
+tools/install-bare.sh        # adds the reflex skills to ~/.claude/skills, never overwrites
+```
+
+Then install the `lab` plugin below (its commands keep the `/lab:` prefix on purpose: that is the research process). This also puts `progress/eta.py` where `/progress` and the status bar expect it.
+
 ## Install
 
 ```
 /plugin marketplace add progdinh/claude-stack     # or a local path
 /plugin install lab@sevel-stack
-/plugin install reflexes@sevel-stack
 ```
+
+Prefer prefixes over copying? `/plugin install reflexes@sevel-stack` gives `/reflexes:go`, `/reflexes:huh`, … instead. Don't do both.
 
 | Plugin | What you get |
 |---|---|
@@ -26,7 +38,6 @@ Plugin skills are namespaced (`/lab:tldr`); copy a skill folder to `~/.claude/sk
 
 ## Known rough edges
 
-- `/progress` and the status bar read `~/.claude/skills/progress/eta.py`; a plugin install lives elsewhere, so copy that folder once (above).
 - Some skills mention SEVEL paths (`../AGP`, `docs/lab/profile.md`) in examples; run `/lab:init` in your own repo to create your profile.
 
 ## Regenerating the guide
