@@ -15,7 +15,7 @@ metadata:
 ## Find it — cheapest source first
 1. **This conversation.** If I created, edited, read, or mentioned it, I already
    know the path. Use that; don't search.
-2. **Known homes:** `~/.claude/skills/` (personal skills), `~/.claude/skills/lab/`
+2. **Known homes:** `~/.claude/skills/` (personal skills), the lab plugin
    (plugin: `GUIDE.md`, `README.md`, `reference/`),
    `~/.claude/CLAUDE.md`, `~/.claude/settings.json`, `~/.claude/eta-log.jsonl`,
    the project's `docs/`, its lab profile's Paths table, the memory directory.

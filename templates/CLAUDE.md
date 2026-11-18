@@ -1,7 +1,9 @@
 # How I work — applies to every project on this machine
 
+<!-- Template: this is Joseph's working style. Edit it to yours before using it as ~/.claude/CLAUDE.md. -->
+
 A project's own `CLAUDE.md` overrides anything here. The full contract is in
-`~/.claude/skills/lab/reference/contract.md`; this is the short form.
+the `lab` plugin's `reference/contract.md`; this is the short form.
 
 ## For non-trivial work (a new component, a design choice, an experiment, a refactor)
 

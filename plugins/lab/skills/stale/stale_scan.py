@@ -65,7 +65,7 @@ def scan_docs(root, cap):
             if hit is None and "/" not in tok:
                 hit = names.get(tok)          # bare filename that lives somewhere in the repo
             if hit is None and (root.parent / tok).exists():
-                continue                      # a sibling repo, e.g. AGP/... — out of scope
+                continue                      # a sibling repo, e.g. ../other-repo/... — out of scope
             line = text[:m.start()].count("\n") + 1
             if hit is None:
                 if tok.startswith(("~", "..")) or tok.split("/")[0] in ("docs", "artifacts") and "lab" in tok:

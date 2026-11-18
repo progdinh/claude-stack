@@ -29,8 +29,6 @@ Prefer prefixes over copying? `/plugin install reflexes@sevel-stack` gives `/ref
 
 **Guide (3 pages per language):** [English](docs/stack-guide.en.pdf) · [Français](docs/stack-guide.fr.pdf). The nine skills I use most come first.
 
-Plugin skills are namespaced (`/lab:tldr`); copy a skill folder to `~/.claude/skills/` if you want the bare `/tldr`.
-
 ## Templates (not installable as plugins)
 
 - `templates/CLAUDE.md` → `~/.claude/CLAUDE.md`. The working contract: plan with a challenge, file a record per step, quiet output, ETAs in measured time.
@@ -38,7 +36,7 @@ Plugin skills are namespaced (`/lab:tldr`); copy a skill folder to `~/.claude/sk
 
 ## Known rough edges
 
-- Some skills mention SEVEL paths (`../AGP`, `docs/lab/profile.md`) in examples; run `/lab:init` in your own repo to create your profile.
+- The skills read a per-project profile at `docs/lab/profile.md`. Without one they fall back to generic defaults and say so; run `/lab:init` once per project to create it.
 
 ## Regenerating the guide
 

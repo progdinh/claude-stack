@@ -2,9 +2,8 @@
 
 **Using it? Read [GUIDE.md](GUIDE.md).** This file is for maintaining it.
 
-Lives at `~/.claude/skills/lab/`, so it auto-loads in **every project on this
-machine** as `lab@skills-dir` — no install step. Skills are namespaced
-(`/lab:…`), so they never shadow a project's own skills.
+Install from the marketplace (`/plugin install lab@sevel-stack`). Skills are
+namespaced (`/lab:…`), so they never shadow a project's own skills.
 
 | Skill | Use it when | Leaves behind |
 |---|---|---|
@@ -55,18 +54,18 @@ line. The invariant part of the process is `reference/contract.md`.
 | Check | Result |
 |---|---|
 | `claude plugin validate` | passed |
-| `claude plugin list` | `lab@skills-dir`, loaded, user scope |
+| `claude plugin list` | loaded, user scope |
 | `/lab:init` in an unrelated project (URL shortener, no hardware) | profile with web currencies (p99 @ 1000 rps, EUR/month, vCPU, pool depth), provenance tags, "not established" section — no skill text edited |
 | `/lab:derive-ansatz` there | derivation filed + indexed, ledger updated, 4 ansätze (1 killed / 2 promoted / 1 parked); 12 turns, 0.32 USD on Sonnet |
 | `/lab:tldr` with a profile | correct recap (8 turns) |
 | no-profile fallback | injection line tested in a shell only (prints the defaults message, exit 0) — **not yet run end-to-end through a skill** |
-| Name collision inside `sevel/experimentations` | Claude picks the project-local `derive-ansatz`, treats `lab:` as fallback |
+| Name collision with a project-local skill of the same name | Claude picks the project-local `derive-ansatz`, treats `lab:` as fallback |
 
 | `/lab:draft-ideas … --n 8` (v0.2.0) | 8 turns; checked the existing derivation, folded a duplicate into it, kept the kill on record, priced the top three; wrote `ideas.md` |
 
 | Personal reflex skills exercised live by the user | `/huh`, `/last`, `/go`, `/rectify` (x3), `/your-take`, `/progress`. Not yet run: `/where`, `/big-job`, `/update-context` beyond its flag path |
 
-| `/lab:stale` scanner on `sevel/experimentations` (v0.4.0) | first run raised 83 dead refs + 7 imports; after tightening (basename lookup, path-token filter, `ast` imports, sibling-track packages) **44 + 2**; hand-verified: 5 real findings, the rest examples / external repo names / dataset keys / historical citations. The judgement pass, not the scanner, found the most important one (a status row that lies) |
+| `/lab:stale` scanner on a multi-track research repo (v0.4.0) | first run raised 83 dead refs + 7 imports; after tightening (basename lookup, path-token filter, `ast` imports, sibling-track packages) **44 + 2**; hand-verified: 5 real findings, the rest examples / external repo names / dataset keys / historical citations. The judgement pass, not the scanner, found the most important one (a status row that lies) |
 
 v0.2.0 skills **not yet exercised on a real task**: `apply-academia`,
 `novelty-claim`, `ablation-plan`, `repro-check`, `integrity-audit`,
@@ -82,26 +81,22 @@ shared with the tested skills), and multi-track repos.
 ## Editing
 
 `SKILL.md` edits take effect live. Changes to `plugin.json` or `reference/`
-need `/reload-plugins`. Check with `claude plugin validate ~/.claude/skills/lab`.
-Disable with `claude plugin disable lab@skills-dir`.
+need `/reload-plugins`. Check with `claude plugin validate plugins/lab`.
 
-## Sharing later
+## Sharing
 
-This directory is a git repo. To give it to a team: push it, add a
-`.claude-plugin/marketplace.json` in a marketplace repo pointing at it, and
-members run `/plugin marketplace add <repo>` then `/plugin install lab`.
+This plugin ships through the `sevel-stack` marketplace in this repository.
 
 ## Decisions
 
 ### Skills-directory plugin, not plain personal skills
-**Decision:** package as a plugin under `~/.claude/skills/lab/` with a
+**Decision:** package as a plugin with a
 `.claude-plugin/plugin.json` manifest.
 **Why:** the constraint is minutes of attention to get the process into a new
 project (was ~30 min of copy-and-rewrite per project, with drift; target one
 command). Plain personal skills were the obvious cheaper option but Claude
 Code's name precedence is Enterprise > **Personal > Project**, so a personal
-`derive-ansatz` would shadow the specialised project-local one in
-`sevel/experimentations`. Plugin skills are namespaced, so both coexist. A
+`derive-ansatz` would shadow a specialised project-local one. Plugin skills are namespaced, so both coexist. A
 marketplace plugin was deferred: it is copied into a cache and updated by
 version bump, wrong for something edited daily.
 **Would be reopened by:** the profile abstraction failing in a second project
@@ -134,8 +129,8 @@ commands with no substitution, loops, or `exit`, and test every skill once
 with `claude -p "/lab:<skill>" --output-format json` — `num_turns: 0` is the
 signature of this failure. Cost accepted: a session started in a subdirectory
 won't find the profile and falls back to defaults (and says so).
-**Known residual, not yet chased further:** the origin repo
-(`sevel/experimentations`) keeps its own specialised copies of five skills, so
+**Known residual, not yet chased further:** the repo this
+plugin was extracted from keeps its own specialised copies of five skills, so
 an improvement to a procedure has to be made in both places.
 
 ### Deliberately not built
