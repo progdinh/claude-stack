@@ -45,3 +45,7 @@ uv run --with reportlab python tools/gen_stack_guide.py
 ```
 
 Reads each skill's frontmatter; add a French phrase to `tools/phrases_fr.json` when you add a skill (the script refuses to run without it). macOS fonts.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
