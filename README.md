@@ -5,7 +5,7 @@ Two plugins plus two drop-in templates, as used at the hackathon.
 ## Install
 
 ```
-/plugin marketplace add <github-user>/claude-stack     # or a local path
+/plugin marketplace add progdinh/claude-stack     # or a local path
 /plugin install lab@sevel-stack
 /plugin install reflexes@sevel-stack
 ```
